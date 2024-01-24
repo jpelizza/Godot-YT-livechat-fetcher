@@ -32,3 +32,7 @@ public void PrintYTLiveChatMsg(LiveChatMessageArrayResponse LCMArray)
 		}
 	}
 ```
+
+## Complete example project
+
+Can be found under `` ExampleProject ``
