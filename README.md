@@ -16,7 +16,7 @@ To use this project it's as simple as dropping YTLiveChat folder into your proje
 
 1.) Drop YTLiveChat into your project's root folder.
 
-2.) Install Bewtibsift.Json using `` dotnet add package Newtonsoft.Json ``.
+2.) Install Newtonsoft.Json using `` dotnet add package Newtonsoft.Json ``.
 
 3.) Have a slot function to be signaled to when a new batch of messages arrive.
 
