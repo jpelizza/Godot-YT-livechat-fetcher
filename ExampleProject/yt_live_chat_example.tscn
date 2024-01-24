@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcoovmu08i0e4"]
+
+[ext_resource type="PackedScene" uid="uid://8fgragpodrvc" path="res://YTLiveChat/LiveChat.tscn" id="1_61lwf"]
+[ext_resource type="Script" path="res://YTLiveChatExample.cs" id="1_gr41h"]
+
+[node name="YTLiveChatExample" type="Node2D"]
+script = ExtResource("1_gr41h")
+
+[node name="LiveChat" parent="." instance=ExtResource("1_61lwf")]
+
+[connection signal="newMessageList" from="LiveChat" to="." method="PrintYTLiveChatMsg"]

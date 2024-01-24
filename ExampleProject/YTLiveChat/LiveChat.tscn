@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://8fgragpodrvc"]
+
+[ext_resource type="Script" path="res://YTLiveChat/Scripts/LiveChat.cs" id="1_uvib8"]
+[ext_resource type="Script" path="res://YTLiveChat/Scripts/Video.cs" id="2_74ee3"]
+
+[node name="LiveChat" type="HTTPRequest"]
+script = ExtResource("1_uvib8")
+
+[node name="Video" type="HTTPRequest" parent="."]
+script = ExtResource("2_74ee3")
+
+[node name="FetchTimer" type="Timer" parent="."]
+
+[connection signal="request_completed" from="." to="." method="OnRequestComplete"]
+[connection signal="RequestComplete" from="Video" to="." method="OnVideoInformationRetrieved"]
+[connection signal="request_completed" from="Video" to="Video" method="OnRequestComplete"]
+[connection signal="timeout" from="FetchTimer" to="." method="FetchChatMessages"]
